@@ -1,0 +1,157 @@
+%-------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% You can have multiple style options the legal options ones are:
+%
+%   centered:	the name and address are centered at the top of the page 
+%				(default)
+%
+%   line:		the name is the left with a horizontal line then the address to
+%				the right
+%
+%   overlapped:	the section titles overlap the body text (default)
+%
+%   margin:		the section titles are to the left of the body text
+%		
+%   11pt:		use 11 point fonts instead of 10 point fonts
+%
+%   12pt:		use 12 point fonts instead of 10 point fonts
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[margin]{res}  
+
+% Default font is the helvetica postscript font
+\usepackage{helvet}
+
+% Increase text height
+\textheight=700pt
+
+\begin{document}
+
+%-------------------------------------------------------------------------------
+%	NAME AND ADDRESS SECTION
+%-------------------------------------------------------------------------------
+\name{Joshua Schmidt}
+
+% Note that addresses can be used for other contact information:
+% -phone numbers
+% -email addresses
+% -linked-in profile
+
+\address{\\LinkedIn : https://linkedin.com/in/joshua-n-schmidt
+\\Github : https://github.com/jschmidtnj
+}
+\address{joshuanschmidt@gmail.com \\(908) 531-7087\\Website : https://joshuaschmidt.tech\\}
+
+% Uncomment to add a third address
+%\address{Address 3 line 1\\Address 3 line 2\\Address 3 line 3}
+%-------------------------------------------------------------------------------
+
+\begin{resume}
+
+%-------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%-------------------------------------------------------------------------------
+\section{OBJECTIVE}
+{\sl Computer Engineering Student at Stevens. Hardworking, creative and determined. Looking for internship opportunities where I can apply my skills and contribute to interesting projects }
+
+\section{EDUCATION}
+\textbf{Stevens Institute of Technology}, Hoboken, NJ \hfill GPA: 3.99/4\\
+{\sl Bachelors of Engineering}, Computer Engineering\\
+Expected May, 2022 \\
+\textbf{Watchung Hills Regional High School}, Warren, NJ\\
+{\sl Graduated June 2017}
+
+%-------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%-------------------------------------------------------------------------------
+\section{TECHNICAL\\SKILLS}
+
+\textbf{Languages: } Python, C++, Java, Javascript, Golang, Dart (Flutter)
+\\
+\textbf{Databases: } MySQL / Postgres, MongoDB, SQLite, Redis, Elasticsearch
+\\
+\textbf{Cloud: } AWS, GCP, Azure
+\\
+\textbf{Tools/Frameworks: } Git, Linux, ROS, Node.js, Vue.js, React.js, Graphql, REST,
+PyTorch, Nuxt, Firebase, Wordpress, BeautifulSoup, PlatformIO, WebRTC
+\\
+\textbf{Familiar: } Matlab, HTML, CSS, Tensorflow, Jupyter Notebooks
+\\
+\textbf{General: } Data Structures, Algorithms, OOP
+
+%-------------------------------------------------------------------------------
+% Modify the format of each position
+\begin{format}
+\title{l}\\
+\dates{l}\location{r}\\
+\body\\
+\end{format}
+%-------------------------------------------------------------------------------
+
+\section{EXPERIENCE}
+
+\textbf{Colgate Palmolive - Google IT Internship \hfill{May '18 - Aug '18}\\}
+\normalfont{Explaining theory behind different experiments to 1st-year Undergraduate \\student and guiding them in lab practicals}
+
+\section{PROJECTS}
+\employer{LNMIIT}
+\location{}
+\title{\textbf{Next Season Scrapper\hfill Oct 2018}
+ }
+% \begin{itemize}
+A python based web application which crawls imdb.com and collects information about the upcoming episode for a given TV-Series and emailing this information to the provided email id.  
+% \end{itemize}
+\begin{itemize}
+\item \textbf{Technology/Tools:} Python, BeautifulSoup, MySQL, Omdb API
+\end{itemize}
+\begin{itemize}
+\item \textbf{Link :} github.com/Aneesh540/NextSeason
+\end{itemize}
+
+\employer{LNMIIT}
+\location{}
+\title{\textbf{Academic Project: Learning Management App \hfill Sep - Dec 2018}
+ }
+% \begin{itemize}
+Worked in a 4 person team to develop a desktop based application in Java-Swing. The application provides an interface to streamline the process of content sharing communication between student and faculty.\\
+I was responsible for designing database related to faculty and writing Java code which integrates faculty features like Course creation, Posts, Assignment to the main \\application
+% \end{itemize}
+\begin{itemize}
+\item \textbf{Technology/Tools:} Java, Java-Swing, MySQL 
+\end{itemize}
+% \begin{itemize}
+% \item \textbf{Link :} github.com/Aneesh540/NextSeason
+% \end{itemize}
+
+\section{CERTIFICATION}
+\par
+\normalfont{.}
+\\
+\normalfont{\textbullet{} \textbf{Introduction to Data Science in Python} by University of Michigan on \sl{Coursera} \\ Verify : coursera.org/verify/BDNM92TULS82}
+\\
+\textbullet{} \textbf{Applied Machine Learning in Python} by University of Michigan on \sl{Coursera} \\ Ongoing
+
+
+\section{RELEVANT\\COURSES}
+\par
+\normalfont{\textbullet{} Intro to Comp Sci}
+\normalfont{\textbullet{} Data Structures}
+\normalfont{\textbullet{} Algorithms}
+\normalfont{\textbullet{} Information Systems Engineering}
+\normalfont{\textbullet{} Microprocessor Systems}
+\normalfont{\textbullet{} Image Processing}
+
+\section{ADDITIONAL ACTIVITIES}
+
+\normalfont{\textbullet{} Treasurer of Stevens Ultimate}
+\normalfont{\textbullet{} Founder of Business Collaboration Tool Startup}
+\normalfont{\textbullet{} NASA SUITS}
+
+%-------------------------------------------------------------------------------
+
+\end{resume}
+\end{document}

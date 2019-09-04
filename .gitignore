@@ -1,5 +1,5 @@
-# generated pdf file
-*.pdf
+# generated files
+__*
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

@@ -8,4 +8,5 @@ deploy:
   on:
     repo: jschmidtnj/resume
   skip_cleanup: true
+  local-dir: .
   acl: public-read

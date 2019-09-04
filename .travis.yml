@@ -1,3 +1,4 @@
+language: generic
 deploy:
   provider: gcs
   access_key_id: GOOG1EHUEF2TLEDQDA5WJ2TXRO6KL2ONYY2QHZDHBFCMCI6AGIYVJJ5WJW7AI

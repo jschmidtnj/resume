@@ -216,6 +216,7 @@
 \def\@printcentername{\begingroup
   % print the name centered
   \leavevmode\hbox to \textwidth{\hfil\@tablebox{\namefont\@name}\hfil}\par
+  \vskip 8pt
   \@ifundefined{@addressone}{%
     % do nothing
   }{
@@ -236,6 +237,7 @@
     }
   }%
   % Add a horizontal line after name
+  \vskip 4pt
   \fullline
 \endgroup}
 

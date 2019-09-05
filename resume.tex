@@ -25,6 +25,9 @@
 
 % Default font is the helvetica postscript font
 \usepackage{helvet}
+% remove hyphens
+\usepackage[none]{hyphenat}
+\sloppy
 
 % Increase text height
 \textheight=700pt
@@ -34,17 +37,17 @@
 %-------------------------------------------------------------------------------
 %	NAME AND ADDRESS SECTION
 %-------------------------------------------------------------------------------
-\name{Joshua Schmidt}
+\name{\Large{JOSHUA SCHMIDT}}
 
 % Note that addresses can be used for other contact information:
 % -phone numbers
 % -email addresses
 % -linked-in profile
 
+\address{joshuanschmidt@gmail.com \\(908) 531-7087\\Website : https://joshuaschmidt.tech\\}
 \address{\\LinkedIn : https://linkedin.com/in/joshua-n-schmidt
 \\Github : https://github.com/jschmidtnj
 }
-\address{joshuanschmidt@gmail.com \\(908) 531-7087\\Website : https://joshuaschmidt.tech\\}
 
 % Uncomment to add a third address
 %\address{Address 3 line 1\\Address 3 line 2\\Address 3 line 3}
@@ -55,32 +58,30 @@
 %-------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %-------------------------------------------------------------------------------
-\section{OBJECTIVE}
-{\sl Computer Engineering Student at Stevens. Looking for internship opportunities 
-  where I can apply my skills and contribute to interesting projects}
 
 \section{EDUCATION}
-\textbf{Stevens Institute of Technology}, Hoboken, NJ \hfill GPA: 3.99/4\\
+\textbf{Stevens Institute of Technology}, Hoboken, NJ \hfill GPA: 3.98/4\\
 {\sl Bachelors of Engineering}, Computer Engineering\\
-Expected May, 2022
+{\sl Dean's List}\\
+Expected Graduation May, 2022
 
 %-------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %-------------------------------------------------------------------------------
 \section{TECHNICAL\\SKILLS}
 
-\textbf{Languages: } Python, C++, Java, Javascript, Golang, Dart (Flutter)
+\textbf{Languages:} Python, C++, Java, Javascript, Golang, Dart (Flutter)
 \\
-\textbf{Databases: } MySQL / Postgres, MongoDB, SQLite, Redis, Elasticsearch
+\textbf{Databases:} MySQL / Postgres, MongoDB, SQLite, Redis, Elasticsearch
 \\
-\textbf{Cloud: } GCP, AWS, Azure
+\textbf{Cloud:} GCP, AWS, Azure
 \\
-\textbf{Tools/Frameworks: } Git, Linux, ROS, Node.js, Vue.js, React.js, Graphql, REST,
+\textbf{Tools/Frameworks:} Git, Linux, ROS, Node.js, Vue.js, React.js, Graphql, REST,
 PyTorch, Nuxt, Firebase, Wordpress, BeautifulSoup, PlatformIO, WebRTC
 \\
-\textbf{Familiar: } Matlab, HTML, CSS, Tensorflow, Jupyter Notebooks
+\textbf{Familiar:} Matlab, HTML, CSS, Tensorflow, Jupyter Notebooks
 \\
-\textbf{General: } Data Structures, Algorithms, OOP
+\textbf{General:} Data Structures, Algorithms, OOP
 
 %-------------------------------------------------------------------------------
 % Modify the format of each position
@@ -93,47 +94,50 @@ PyTorch, Nuxt, Firebase, Wordpress, BeautifulSoup, PlatformIO, WebRTC
 
 \section{EXPERIENCE}
 
-\textbf{Bell Labs - Robotics Development Internship \hfill{May '18 - Aug '18}\\}
-\normalfont{\textbullet{}{\sl Swerve Drive Robot: } The summer was spent updating a swerve drive robot to work on ROS. This required many changes on both the 
-  hardware and software side, as the robot needed new motorcontrollers, motors, microprocessor, etc., as well as compatible kinematics software for the swerve drive. 
-  Then this software needed to be integrated into the ROS stack, with accurate feedback from the motorcontrollers for distance and speed, as well as lidar and imu data.
-  Modularity added to top and front of robot for easy modification and experimentation.\\}
-\normalfont{\textbullet{}{\sl Bell Labs Innovation Award}}
+\textbf{Nokia Bell Labs -- Robotics Development Internship \hfill{May '18 - Aug '18}\\}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Swerve Drive Robot:} Updated swerve drive robot platform to work on ROS. Required changes on both the 
+  hardware and software side, as robot required new motorcontrollers, motors, microprocessor, as well as compatible kinematics software for the swerve drive. 
+  Integrated software into ROS stack, with accurate feedback from the motorcontrollers for distance and speed, lidar and imu data.
+  Modularity added to top and front of robot for easy modification and experimentation.}
 
-\textbf{L3 Technologies - Software Engineering Internship \hfill{Jan '18 - May '18}\\}
-\normalfont{\textbullet{}{\sl ANTX demo: } Created new drivers for RT2200a and Vortex radios. Interfaced  with PRC117 and Cisco wifi router to send network traffic 
+\textbf{L3 Technologies -- Software Engineering Internship \hfill{Jan '18 - May '18}\\}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl ANTX demo:} Created new drivers for RT2200a and Vortex radios. Interfaced  with PRC117 and Cisco wifi router to send network traffic 
   and monitor data throughput. Used this data to dynamically adjust network data, including a p2p video stream (WebRTC) and text chat (udp). Simulated network jamming 
-  and throttling, dynamically changing frequency and band. Used Node.js, Vue.js, Java, Springboot, etc.\\}
-\normalfont{\textbullet{}{\sl AACN development: } Agile product development for managing radio systems. Created interfaces to legacy codebase, created Docker containers 
+  and throttling, dynamically changing frequency and band. Used Node.js, Vue.js, Java, Springboot\\}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl AACN development:} Agile product development for managing radio systems. Created interfaces to legacy codebase, created Docker containers 
   for production environment, created websocket notification system, and implemented put commands endpoint in device manager.}
 
-\textbf{Colgate Palmolive - Google IT Internship \hfill{May '18 - Aug '18}\\}
-\normalfont{\textbullet{}{\sl Workflow Responsive Web App: } Designed and created a website for employees to implement their own workflows
- - forms with approval chains - such as travel expenses, work-orders, and surveys. Deployed using Firebase database, hosting, serverless functions,
+\textbf{Colgate Palmolive -- Google IT Internship \hfill{May '18 - Aug '18}\\}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Workflow Responsive Web App:} Designed and created a website for employees to implement their own workflows
+ -- forms with approval chains -- such as travel expenses, work-orders, and surveys. Deployed using Firebase database, hosting, serverless functions,
  storage, using jQuery and Vue.js for UI.\\}
-\normalfont{\textbullet{}{\sl Daily Directory Update + Active Drive Audit: } Developed software to update Google Directory with latest information from HR, including employee 
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Daily Directory Update + Active Drive Audit:} Developed software to update Google Directory with latest information from HR, including employee 
   name, email, status, address, and work location. Input from csv files, parsed and sorted for api output. 
   Created real-time software for logging Google Drive data, flagging suspect users. Email alerts to system admins. Google admin and reports apis, mailjet, app engine, Kubernetes,
-  Golang, Jenkins CI/CD.\\}
+  Golang, Jenkins CI/CD.}
+
+\section{AWARDS}
+\normalfont{{\sl Nokia Bell Labs Innovation Award}\\}
+\normalfont{{\sl Finalist - NASA SUITS '19}\\}
+\normalfont{{\sl Fake News challenge honorable mention - YHacks '18}\\}
+\normalfont{{\sl First Place - Boston Hacks '17}}
 
 %-------------------------------------------------------------------------------
 
 \section{RELEVANT\\COURSES}
 \par
-\normalfont{\textbullet{} Intro to Comp Sci}
-\normalfont{\textbullet{} Data Structures}
-\normalfont{\textbullet{} Algorithms}
-\normalfont{\textbullet{} Information Systems Engineering}
-\normalfont{\textbullet{} Microprocessor Systems}
-\normalfont{\textbullet{} Image Processing}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Intro to Comp Sci}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Data Structures}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Algorithms}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Information Systems Engineering}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Microprocessor Systems}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Image Processing}
 
-\section{ADDITIONAL ACTIVITIES}
+%-------------------------------------------------------------------------------
 
-\normalfont{\textbullet{} Treasurer of Stevens Ultimate}
-\normalfont{\textbullet{} Founder of Business Collaboration Tool Startup}
-\normalfont{\textbullet{} NASA SUITS}
-\normalfont{\textbullet{} YHacks}
-\normalfont{\textbullet{} Boston Hacks}
+\section{ACTIVITIES}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Treasurer of Stevens Ultimate}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Founder of B2B Startup}
 
 %-------------------------------------------------------------------------------
 

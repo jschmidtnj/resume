@@ -44,9 +44,13 @@
 % -email addresses
 % -linked-in profile
 
-\address{joshuanschmidt@gmail.com \\(908) 531-7087\\Website : https://joshuaschmidt.tech\\}
-\address{\\LinkedIn : https://linkedin.com/in/joshua-n-schmidt
-\\Github : https://github.com/jschmidtnj
+\address{joshuanschmidt@gmail.com \\(908) 531-7087}
+\address{
+  \begin{tabular}{ l l }
+    Website: & https://joshuaschmidt.tech \\ 
+    LinkedIn: & https://linkedin.com/in/joshua-n-schmidt \\  
+    Github: & https://github.com/jschmidtnj
+  \end{tabular}
 }
 
 % Uncomment to add a third address
@@ -62,26 +66,23 @@
 \section{EDUCATION}
 \textbf{Stevens Institute of Technology}, Hoboken, NJ \hfill GPA: 3.98/4\\
 {\sl Bachelors of Engineering}, Computer Engineering\\
-{\sl Dean's List}\\
-Expected Graduation May, 2022
+{\sl Minor}, Computer Science, {\sl Dean's List}\\
+May, 2021
 
 %-------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %-------------------------------------------------------------------------------
 \section{TECHNICAL\\SKILLS}
 
-\textbf{Languages:} Python, C++, Java, Javascript, Golang, Dart (Flutter)
+\textbf{Languages:} Java, Python, Golang, C++, C, Javascript, Dart
 \\
-\textbf{Databases:} MySQL / Postgres, MongoDB, SQLite, Redis, Elasticsearch
+\textbf{Databases:} MongoDB, Redis, Elasticsearch, MySQL / Postgres, SQLite
 \\
-\textbf{Cloud:} GCP, AWS, Azure
+\textbf{Cloud:} GCP, AWS, DigitalOcean
 \\
-\textbf{Tools/Frameworks:} Git, Linux, ROS, Node.js, Vue.js, React.js, Graphql, REST,
-PyTorch, Nuxt, Firebase, Wordpress, BeautifulSoup, PlatformIO, WebRTC
-\\
-\textbf{Familiar:} Matlab, HTML, CSS, Tensorflow, Jupyter Notebooks
-\\
-\textbf{General:} Data Structures, Algorithms, OOP
+\textbf{Tools/Frameworks:} Git, Graphql, REST, Linux, Flutter, ROS, PlatformIO, Node.js,
+Springboot, Vue.js, Scikit Learn, React.js, Docker, Maven+Gradle, Firebase, BeautifulSoup,
+WebRTC, Serverless, Monorepo, HTML+CSS, Kubernetes, MQTT
 
 %-------------------------------------------------------------------------------
 % Modify the format of each position
@@ -95,49 +96,53 @@ PyTorch, Nuxt, Firebase, Wordpress, BeautifulSoup, PlatformIO, WebRTC
 \section{EXPERIENCE}
 
 \textbf{Nokia Bell Labs -- Robotics Development Internship \hfill{May '19 - Aug '19}\\}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Swerve Drive Robot:} Updated swerve drive robot platform to work on ROS. Required substantial changes in 
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Swerve Drive Robot:} Updated fully autonomous swerve drive robot platform to work on ROS. Required substantial changes in 
   hardware and software, as robot needed new motorcontrollers, motors, microprocessor, and compatible kinematics software for the new drivetrain. 
-  Integrated drivetrain control software into ROS stack, with accurate feedback from the motorcontrollers for distance and speed, lidar and imu data.
-  Modularity added to top and front of robot for easy modification and experimentation.}
+  Integrated drivetrain control software into ROS stack, with accurate odometry (feedback) from encoder, lidar, computer vision and imu data.
+  Modularity added for easy modification and experimentation, with ability to hot-swap sensors and end effectors. Used Python, C++, ROS, PlatformIO}
 
 \textbf{L3 Technologies -- Software Engineering Internship \hfill{Jan '19 - May '19}\\}
 \normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl ANTX demo:} Created new drivers for RT2200a and Vortex radios. Interfaced  with PRC117 and Cisco wifi router to send network traffic 
   and monitor data throughput. Used this data to dynamically adjust network data, including a p2p video stream (WebRTC) and text chat (udp). Simulated network jamming 
-  and throttling, dynamically changing frequency and band. Used Node.js, Vue.js, Java, Springboot\\}
+  and throttling, dynamically changing frequency and band. Used Java, Vue.js, Node.js, Springboot\\}
 \normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl AACN development:} Agile product development for managing radio systems. Created interfaces to legacy codebase, created Docker containers 
-  for production environment, added websocket notification system, and implemented put commands endpoint in device manager.}
+  for production environment, added websocket notification system, and implemented put commands endpoint in device manager. Used Docker, Java, UDP + TCP sockets, Gradle, Springboot}
 
 \textbf{Colgate Palmolive -- Google IT Internship \hfill{May '18 - Aug '18}\\}
 \normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Workflow Responsive Web App:} Designed and created webapp for employees to implement their custom workflows
  -- forms with approval chains -- such as travel expenses, work-orders, surveys. Deployed using Firebase database, hosting, serverless functions,
  storage, using jQuery and Vue.js for UI.\\}
 \normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Daily Directory Update + Active Drive Audit:} Developed software to update Google Directory with latest information from HR,
-  including employee name, email, work location, etc. Input from csv files, parsed and sorted for api. 
-  Created logging program for Google Drive data, flagging suspect users. Email alerts for system admins. Used Google admin and reports apis, mailjet, app engine, Kubernetes,
-  Golang, Jenkins CI/CD.}
+  (employee name, email, etc).
+  Created logging program for Google Drive data, flagging suspect users, with email alerts. Used Google admin and reports apis, mailjet, app engine, Kubernetes,
+  Golang, Jenkins}
+
+%-------------------------------------------------------------------------------
 
 \section{AWARDS}
-\normalfont{{\sl Nokia Bell Labs Innovation Award}\\}
+\normalfont{{\sl Unix World Challenge '19}\\}
+\normalfont{{\sl Nokia Bell Labs Innovation Award '19}\\}
 \normalfont{{\sl Finalist - NASA SUITS '19}\\}
-\normalfont{{\sl Fake News challenge honorable mention - YHacks '18}\\}
+\normalfont{{\sl Third Place - Stevens Healthtech Hackathon '18}\\}
+\normalfont{{\sl Fake News challenge - YHacks '18}\\}
 \normalfont{{\sl First Place - Boston Hacks '17}}
 
 %-------------------------------------------------------------------------------
 
 \section{RELEVANT\\COURSES}
 \par
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Intro to Comp Sci}
 \normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Data Structures}
 \normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Algorithms}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Information Systems Engineering}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Information Systems Engineering}\\
 \normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Microprocessor Systems}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Image Processing}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Image Processing and Coding}
 
 %-------------------------------------------------------------------------------
 
 \section{ACTIVITIES}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Treasurer of Stevens Ultimate}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Founder of B2B Startup}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} team leader NASA Suits, '19}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Treasurer, Ultimate Frisbee}
+\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} co-founder, Mailflown}
 
 %-------------------------------------------------------------------------------
 

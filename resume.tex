@@ -25,6 +25,8 @@
 
 % Default font is the helvetica postscript font
 \usepackage{helvet}
+% add urls
+\usepackage{hyperref}
 % remove hyphens
 \usepackage[none]{hyphenat}
 \sloppy
@@ -44,12 +46,12 @@
 % -email addresses
 % -linked-in profile
 
-\address{joshuanschmidt@gmail.com \\(908) 531-7087}
+\address{\href{mailto:joshuanschmidt@gmail.com?Subject=Resume}{joshuanschmidt@gmail.com} \\\href{tel:1-908-531-7087}{(908) 531-7087}}
 \address{
   \begin{tabular}{ l l }
-    Website: & https://joshuaschmidt.tech \\
-    Github: & https://github.com/jschmidtnj \\ 
-    LinkedIn: & https://linkedin.com/in/joshua-n-schmidt
+    Website: & \url{https://joshuaschmidt.tech} \\
+    Github: & \url{https://github.com/jschmidtnj} \\ 
+    LinkedIn: & \url{https://linkedin.com/in/joshua-n-schmidt}
   \end{tabular}
 }
 
@@ -99,7 +101,7 @@ WebRTC, Serverless, ARM-v8, HTML+CSS, Kubernetes, MQTT
 \normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Swerve Drive Robot:} Updated fully autonomous swerve drive robot platform to work on ROS. Required substantial changes in 
   hardware and software, as robot needed new motorcontrollers, motors, microprocessor, and compatible kinematics software for the new drivetrain. \\
   {\tiny\raisebox{1ex}{\textbullet}\,} Integrated drivetrain control software into ROS stack, with accurate odometry (feedback) from encoder, lidar, computer vision and imu data.
-  Modularity added for easy modification and experimentation, with ability to hot-swap sensors and end effectors. Used Python, C++, ROS, PlatformIO}
+  Modularity added for easy modification and experimentation, with ability to hot-swap sensors and end effectors. Used Python, C++, ROS}
 
 \textbf{L3 Technologies -- Software Engineering Internship \hfill{Jan '19 - May '19}\\}
 \normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl ANTX demo:} Created new drivers for RT2200a and Vortex radios. Interfaced  with PRC117 and Cisco wifi router to send network traffic 

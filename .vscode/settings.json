@@ -3,5 +3,6 @@
         "datastructure",
         "pseudocode",
         "webserver"
-    ]
+    ],
+    "latex-workshop.latex.autoBuild.run": "never"
 }

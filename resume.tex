@@ -1,154 +1,114 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
 %-------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+% CONFIGURATIONS
 %-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{styles}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% You can have multiple style options the legal options ones are:
-%
-%   centered:	the name and address are centered at the top of the page 
-%				(default)
-%
-%   line:		the name is the left with a horizontal line then the address to
-%				the right
-%
-%   overlapped:	the section titles overlap the body text (default)
-%
-%   margin:		the section titles are to the left of the body text
-%		
-%   11pt:		use 11 point fonts instead of 10 point fonts
-%
-%   12pt:		use 12 point fonts instead of 10 point fonts
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
-\documentclass[margin]{res}  
+% Specify the location of the included fonts
+\fontdir[fonts/]
 
-% Default font is the helvetica postscript font
-\usepackage{helvet}
-\usepackage[dvipsnames]{xcolor}
-% add urls
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks=true,
-  urlcolor=MidnightBlue,
-  linkcolor=cyan,
-  filecolor=magenta,
-  pdftitle={Resume},
-}
-% remove hyphens
-\usepackage[none]{hyphenat}
-\sloppy
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-orange}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
 
-% Increase text height
-\textheight=700pt
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
 
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------------------------------------------------------------------
+%  PERSONAL INFORMATION
+%  Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo{./examples/profile.png}
+\name{Joshua}{Schmidt}
+\position{Master's Candidate {\enskip\cdotp\enskip} Software Engineer}
+\address{New York, NY}{https://google.com/maps/place/1+E+Loop+Rd,+New+York,+NY+10044}
+
+
+
+\mobile{+1 (908) 531-7087}
+\email{jns223@cornell.edu}
+\homepage{joshuaschmidt.tech}
+\github{jschmidtnj}
+\linkedin{joshua-n-schmidt}
+% \googlescholar{jschmidtnj}{}
+% \orcid{0000-0003-1264-6100}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \extrainfo{extra informations}
+
+
+% uncomment below if you have some interesting quote
+% \quote{``Be the change that you want to see in the world."}
+
+%-------------------------------------------------------------------------------
+%  BIBLIOGRAPHY
+%-------------------------------------------------------------------------------
+\addbibresource{resume/citations.bib}
+
+% hook for counting the number of entries
+% inside each refsection in biblatex
+% src: https://tex.stackexchange.com/a/495997/49520
+\makeatletter
+\AtDataInput{%
+  \ifltxcounter{datacount@\the\c@refsection}
+    {}
+    {\newcounter{datacount@\the\c@refsection}}%
+  \stepcounter{datacount@\the\c@refsection}}
+
+\newcommand*{\refsectionbibcount}{\arabic{datacount@\the\c@refsection}}
+\makeatother
+
+% for formatting the heading using our style
+\defbibheading{subbibnumbered}[\refname]{\cvsubsection{#1}}
+
+%-------------------------------------------------------------------------------
 \begin{document}
 
-%-------------------------------------------------------------------------------
-%	NAME AND ADDRESS SECTION
-%-------------------------------------------------------------------------------
-\name{\Large{JOSHUA SCHMIDT}}
 
-% Note that addresses can be used for other contact information:
-% -phone numbers
-% -email addresses
-% -linked-in profile
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
 
-\address{\href{mailto:joshuanschmidt@gmail.com?Subject=Resume}{joshuanschmidt@gmail.com} \\\href{tel:1-908-531-7087}{(908) 531-7087}}
-\address{
-  \begin{tabular}{ l l }
-    Website: & \url{https://joshuaschmidt.tech} \\
-    Github: & \url{https://github.com/jschmidtnj} \\ 
-    LinkedIn: & \url{https://linkedin.com/in/joshua-n-schmidt}
-  \end{tabular}
-}
-
-% Uncomment to add a third address
-%\address{Address 3 line 1\\Address 3 line 2\\Address 3 line 3}
-%-------------------------------------------------------------------------------
-
-\begin{resume}
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {Last Updated On \today}
+  {Joshua Schmidt~~~·~~~Resume}
+  {\thepage}
 
 %-------------------------------------------------------------------------------
-%	EDUCATION SECTION
+%  CV/RESUME CONTENT
+%  Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
+\input{resume/education.tex}
+\input{resume/skills.tex}
+\input{resume/projects.tex}
+\input{resume/experience.tex}
+\input{resume/activities.tex}
 
-\section{EDUCATION}
-\textbf{Cornell University}, NYC, NY\\
-{\sl Masters of Engineering}, Computer Science\\
-May, 2022\\
-\textbf{Stevens Institute of Technology}, Hoboken, NJ \hfill GPA: 3.99/4\\
-{\sl Bachelors of Engineering}, Computer Engineering\\
-{\sl Minor}, Computer Science, {\sl Dean's List}\\
-May, 2021
 
 %-------------------------------------------------------------------------------
-%	COMPUTER SKILLS SECTION
-%-------------------------------------------------------------------------------
-\section{TECHNICAL\\SKILLS}
-
-\textbf{Languages:} Golang, Javascript/Typescript, Java, Python, C++, C
-\\
-\textbf{Databases:} Postgres, MongoDB, Redis, Elasticsearch
-\\
-\textbf{Cloud:} AWS, GCP, DigitalOcean
-\\
-\textbf{Tools/Frameworks:} Git, Graphql, REST, Linux, ROS, IoT, Node.js,
-React, Redux, Vue, Springboot, Docker, Maven+Gradle, Tensorflow,
-Serverless, Kubernetes, MQTT
-
-%-------------------------------------------------------------------------------
-% Modify the format of each position
-\begin{format}
-\title{l}\\
-\dates{l}\location{r}\\
-\body\\
-\end{format}
-%-------------------------------------------------------------------------------
-
-\section{EXPERIENCE}
-
-\textbf{NASA -- Assemblers Software Internship \hfill{May '21 - Aug '21}\\}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Summary:} The Assembler project consists of a set of modular Stewart platform robots that combined can assume intricate structures. This manipulator system additionally has modular end effectors for grasping and interacting with objects on the lunar surface. Slated to deploy on the '28 Artemis mission. \\
-{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Software in the Loop Simulation:} Created interface that combines subsystems of Assemblers project including joint controllers, Stewart platform objects, sensor fusion, trajectory generator and executor, generating a 3D visualization, with a configuration file designating whether to use real or simulated hardware. Used Python, C++, DDS}
-
-\textbf{U.S. Census Bureau -- Civic Digital Fellowship \hfill{May '20 - Aug '20}\\}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Edit Rules Parsing:} Created NLP system for extracting and parsing pseudocode from 500+ page text documents, converting
-  to an abstract object-oriented hierarchy. Datastructure used to produce executable Python code, for validating decennial data. \\
-  {\tiny\raisebox{1ex}{\textbullet}\,}{\sl Spark Proxy \& Dashboard:} Created a proxy script to route requests to the Spark UI and Spark History UI through a path in the dashboard
-  web server, enabling access to the UI without ssh port forwarding. Required html parsing for rewriting url paths. Additionally created reporting features for Differential Privacy
-  System in the dashboard. Used Python, C++, Spark, REST}
-
-\textbf{Nokia Bell Labs -- Robotics Development Internship \hfill{May '19 - Aug '19}\\}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,}{\sl Swerve Drive Robot:} Updated fully autonomous swerve drive robot platform to work on ROS. Required substantial changes in 
-  hardware and software, as robot needed new motorcontrollers, motors, microprocessor, and kinematics software for the drivetrain. \\
-  {\tiny\raisebox{1ex}{\textbullet}\,} Integrated drivetrain control software into ROS stack, with accurate odometry (feedback) from encoder, lidar, computer vision and imu data.
-  Modularity added for easy modification and experimentation, with ability to hot-swap sensors and end effectors. Used Python, C++, ROS}
-
-\textbf{L3 Technologies -- Software Engineering Internship \hfill{Jan '19 - May '19}\\}
-\textbf{Colgate Palmolive -- Google IT Internship \hfill{May '18 - Aug '18}\\}
-
-%-------------------------------------------------------------------------------
-
-\section{RELEVANT\\COURSES}
-\par
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Stevens Student Investment Fund}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Data Structures}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Algorithms}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Machine Learning} \\
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Microprocessor Systems}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} NLP}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Systems Programming}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Image Processing \& Coding}
-
-%-------------------------------------------------------------------------------
-
-\section{ACTIVITIES}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} co-founder, \href{https://rescribe.dev}{reScribe}}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} volunteer \& dev \href{https://ewaab.org}{EWAAB} \href{https://network.ewaab.org}{social network}}
-\normalfont{{\tiny\raisebox{1ex}{\textbullet}\,} Ultimate Frisbee}
-
-%-------------------------------------------------------------------------------
-
-\end{resume}
 \end{document}
